@@ -21,7 +21,8 @@ class MySQL:
             port     = int(self.dict_item['mysql_port']),
             user     = self.dict_item['mysql_username'],
             password = self.dict_item['mysql_password'],
-            database = self.dict_item['mysql_database']
+            database = self.dict_item['mysql_database'],
+            charset  = self.dict_item['mysql_charset']
         )
         return db
 
@@ -54,11 +55,9 @@ class MySQL:
         return result
 
 if __name__ == '__main__':
-    pass
-#     mysql = MySQL()
-#     mysql.connect()
-#     sql = 'select * from agent_info where id = 1007'
-#     print(mysql.query(sql))
+    mysql = MySQL()
+    sql = 'select * from agent_info where id = 1007'
+    print(mysql.query(sql))
 
 
 
