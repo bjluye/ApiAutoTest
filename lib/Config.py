@@ -70,7 +70,7 @@ class Config :
 if __name__ == "__main__":
     ini = Config('E:\python_code\ApiAutoTest\conf\dataSource.ini')
 
-    #print (ini.get_section())
+    print (ini.get_section())
     #print (ini.get_options_by_section('mysql'))
     print (ini.get_item_by_section('mysql'))
     # 类型为list

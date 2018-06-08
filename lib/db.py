@@ -1,5 +1,5 @@
 #-*- coding:utf-8 -*-
-__author__ = 'bjluye@corp.netease.com'
+__author__ = 'luye'
 import pymysql
 from lib.Config import Config
 

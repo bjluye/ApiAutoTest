@@ -2,11 +2,12 @@
 import redis
 from lib.Config import Config
 
-class Redis:
+class RedisApi:
 
     ini = Config('E:\python_code\ApiAutoTest\conf\dataSource.ini')
     dict_item = {}
     list_item = ini.get_item_by_section('redis')
+    print (list_item)
     for k,v in list_item:
         dict_item[k] = v
 
@@ -67,6 +68,10 @@ class Redis:
             print ("the type of key is not string")
         self.redis.getrange(key,start,end)
 
+    def keys(self):
+        flag = self.connect().keys()
+        return flag
+
     '''
     Hash操作
     '''
@@ -80,16 +85,10 @@ class Redis:
         return val
 
 if __name__ == '__main__':
-    pass
-
-
-
-
-
-
-
-
-
-
-
+    mredis = RedisApi()
+    #pass
+    #print(mredis.keys())
+    #mredis.keys('ad.p4p.account.target')
+    #print(mredis.get('049f674dec6b227f1120fcd2dedeea5f'))
+    #print(mredis.hget('ad.job.reg','job-executor@10.165.196.68:9998'))
 
