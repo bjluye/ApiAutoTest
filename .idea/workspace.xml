@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c7672fd3-c828-4979-a12e-07bf2b6f632e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +30,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_advertiser_p4plist.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_advertiser_p4plist.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_advertiser_p4plist.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -104,16 +115,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="p4p_adv_audit_queue.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/p4p_adv_audit_queue.yml">
           <provider selected="true" editor-type-id="text-editor">
@@ -160,7 +161,6 @@
         <option value="$PROJECT_DIR$/conf/data.ini" />
         <option value="$PROJECT_DIR$/bin.py" />
         <option value="$PROJECT_DIR$/lib/Conposer.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/lib/redis.py" />
         <option value="$PROJECT_DIR$/lib/db.py" />
         <option value="$PROJECT_DIR$/conf/算法题.text" />
@@ -176,6 +176,7 @@
         <option value="$PROJECT_DIR$/lib/rabbitMq_login.py" />
         <option value="$PROJECT_DIR$/test/test_login.py" />
         <option value="$PROJECT_DIR$/test/test_advertiser_p4plist.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -596,7 +597,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542770908549</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="test">
+      <created>1542770959620</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1542770959620</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -845,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/python3/Lib/site-packages/pymysql/connections.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14904">
@@ -1077,6 +1078,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding />
         </state>
       </provider>
