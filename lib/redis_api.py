@@ -86,9 +86,10 @@ class RedisApi:
 
 if __name__ == '__main__':
     mredis = RedisApi()
+    #mredis.connect()
     #pass
     #print(mredis.keys())
     #mredis.keys('ad.p4p.account.target')
-    #print(mredis.get('049f674dec6b227f1120fcd2dedeea5f'))
+    print(mredis.get('049f674dec6b227f1120fcd2dedeea5f'))
     #print(mredis.hget('ad.job.reg','job-executor@10.165.196.68:9998'))
 

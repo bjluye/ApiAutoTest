@@ -1,4 +1,5 @@
 #-*- coding:utf-8 -*-
+__author__:'luye'
 from configparser import ConfigParser
 import os
 class Config :
