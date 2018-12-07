@@ -1,42 +1,28 @@
 # !/usr/bin/python
 # -*- coding:utf-8 -*-
-# author
-
+author = '__luye__'
 import requests
 import unittest
 from lib.Config import Config
-import time
-from lib.redis_api import RedisApi
 
 
+class Base(object):
 
-class LoginTest(unittest.TestCase):
+    def get_config(self,key):
+        ini = Config('..\conf\dataSource.ini')
+        dict_item = {}
+        list = ini.get_item_by_section(key)
+        for k, v in list:
+            dict_item[k] = v
+        return dict_item
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
-    ini = Config('..\conf\dataSource.ini')
-    dict_item = {}
-    list = ini.get_item_by_section('omp')
-    for k,v in list:
-        dict_item[k] = v
-
-    r = requests.session()
-
-    def get_auth_code(self):
-        mredis = RedisApi()
-        url_dvcode = 'http://qa.omp.pangu.163.com/user/getAuthCode?random='+str((time.time())*1000)
-        response = self.r.get(url_dvcode)
-        cookies = response.cookies
-        login_user = cookies['loginUser']
-        redis_value = str(mredis.get('session:ad.omp.b:{}'.format(login_user)))
-        redis_value.find('authCodet\x00\x04')
-        auth_code = redis_value[-6:-2]
-
-        return auth_code,login_user
+    def add_cookie(self,cookie):
+        if not cookie:
+            print("COOKIE IS NULL")
+            return False
+        else:
+            requests.utils.add_dict_to_cookiejar()
+        return self.session
 
     def omp_login(self):
         authCode,login_user = self.get_auth_code()
@@ -66,16 +52,12 @@ class LoginTest(unittest.TestCase):
         print(requests.utils.add_dict_to_cookiejar(self.r.cookies,{'token':token}))
         return token,self.r.cookies
 
-
-
-# if __name__ == '__main__':
-#     unittest.main()
-#     login = LoginTest()
-#     login.test_get_auth_code()
-#
+    def p4pList_api_method(self):
+        url = '{}/advertiser/p4pList?token='.format(self.get_config('env')['omp_qa'])
+        print(url)
 
 
 
-
-
-
+if __name__ == '__main__':
+    base = Base()
+    base.p4pList_api_method()

@@ -1,0 +1,11 @@
+case_1:
+  data:
+    channel: ""
+    dir: ""
+    industry: ""
+    limit: 10
+    nameId: ""
+    sort: ""
+    start: 1
+    status: 0
+    subIndustry: ""
