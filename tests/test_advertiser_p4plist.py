@@ -4,7 +4,7 @@ author = '__luye__'
 
 import requests
 import unittest
-from test.test_login import LoginTest
+from tests.test_login import LoginTest
 from lib.get_yml import get_yml_data
 import json
 from  lib.base import Base
@@ -18,7 +18,7 @@ class Adv_P4plist(unittest.TestCase):
     def setUp(self):
         login = LoginTest()
         print(login)
-        self.token,self.cookies = login.omp_login()
+        self.token,self.cookies = login.test_login()
         print("!!!!")
         print(self.cookies)
         if self.cookies.get('token') is not None:

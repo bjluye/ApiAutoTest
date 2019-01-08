@@ -1,30 +1,30 @@
 # !/usr/bin/python
 # -*- coding:utf-8 -*-
 # author
-
+import sys
 import requests
 import unittest
 from lib.Config import Config
 import time
 from lib.redis_api import RedisApi
 
-
-
+print(sys.path.append('E:\\python_code\\ApiAutoTest\\lib'))
 class LoginTest(unittest.TestCase):
+
+    ini = Config('E:\python_code\ApiAutoTest\conf\dataSource.ini')
+    dict_item = {}
+    list = ini.get_item_by_section('omp')
+    for k, v in list:
+        dict_item[k] = v
+        print('____')
+        print(v)
+    r = requests.session()
 
     def setUp(self):
         pass
 
     def tearDown(self):
         pass
-
-    ini = Config('..\conf\dataSource.ini')
-    dict_item = {}
-    list = ini.get_item_by_section('omp')
-    for k,v in list:
-        dict_item[k] = v
-
-    r = requests.session()
 
     def get_auth_code(self):
         mredis = RedisApi()
@@ -38,17 +38,17 @@ class LoginTest(unittest.TestCase):
 
         return auth_code,login_user
 
-    def omp_login(self):
+    def test_login(self):
         authCode,login_user = self.get_auth_code()
         data = {
             'name': self.dict_item['name'],
             'password': self.dict_item['password'],
             'authCode': authCode
         }
+
         cookie = {'name': data['name'], 'loginUser': login_user}
         requests.utils.add_dict_to_cookiejar(self.r.cookies,cookie)
-        print("_++++++")
-        print(self.r.cookies)
+        print("++++++")
         url_login = 'http://qa.omp.pangu.163.com/user/login'
         response = self.r.post(url_login,data)
         if (response.json()['rs'] != 1):
@@ -66,16 +66,8 @@ class LoginTest(unittest.TestCase):
         print(requests.utils.add_dict_to_cookiejar(self.r.cookies,{'token':token}))
         return token,self.r.cookies
 
-
-
 # if __name__ == '__main__':
 #     unittest.main()
 #     login = LoginTest()
 #     login.test_get_auth_code()
 #
-
-
-
-
-
-

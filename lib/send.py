@@ -75,7 +75,7 @@ body_dict =  {"agentId":1007,
              {
                  "cid":28,
                  "isPerpetual":0,
-                 "name":"test",
+                 "name":"tests",
                  "relationId":2742,
                  "status":0,
                  "subTime":"2018-11-20 16:55:00",
