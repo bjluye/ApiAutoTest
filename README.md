@@ -13,7 +13,7 @@ python+requests
 3）ConfigParser
 4) pika
 
-test jenkin-1
+test jenkin-1-1
 
 
 
